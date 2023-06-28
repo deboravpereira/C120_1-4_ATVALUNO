@@ -5,8 +5,8 @@ import math
 p1 = 530
 p2 = 300
 
-xs = []
-ys = []
+#Defina lista para armazenar coordenadas
+
 
 video = cv2.VideoCapture("bb3.mp4")
 
@@ -53,11 +53,11 @@ def goal_track(img, bbox):
     if(dist<=20):
         cv2.putText(img,"Cesta",(300,90),cv2.FONT_HERSHEY_SIMPLEX,0.7,(0,255,0),2)
 
-    xs.append(c1)
-    ys.append(c2)
+    #Adicione coordenadas em listas C1 e C2
+   
 
-    for i in range(len(xs)-1):
-        cv2.circle(img,(xs[i],ys[i]),2,(0,0,255),5)
+    #Use um laço for para desenhar trajetória
+
 
 while True:
     
